@@ -1,3 +1,4 @@
+-- Jump to 90 to skip intro
 --[[
 
 =====================================================================
@@ -798,17 +799,7 @@ require('lazy').setup({
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
-
-    -- FIX: delete this section when render-markdown.nvim is patched
-    config = function()
-      require('tokyonight').setup {
-        plugins = { markdown = true },
-        on_colors = function(_) end,
-        on_highlights = function(_, _) end,
-      }
-    end,
   },
-  --  FIX: UNTIL HERE
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
